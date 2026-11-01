@@ -1,0 +1,24 @@
+{
+  "project": "Pencatat Tugas",
+  "version": "1.0.0",
+  "assets": [
+    {
+      "nama_berkas": "Dinda.mp3",
+      "jenis": "audio/mp3",
+      "ukuran": "Estimasi ukuran file ( 3.5 MB)",
+      "sumber_lisensi": "Youtube / Musik Pengiring Tugas"
+    },
+    {
+      "nama_berkas": "aboutyou.mp3",
+      "jenis": "audio/mp3",
+      "ukuran": "Estimasi ukuran file (5.1 MB)",
+      "sumber_lisensi": "Youtube / Musik Pengiring Tugas"
+    },
+    {
+      "nama_berkas": "iniabadi.mp3",
+      "jenis": "audio/mp3",
+      "ukuran": "Estimasi ukuran file ( 3.8 MB)",
+      "sumber_lisensi": "Youtube / Musik Pengiring Tugas"
+    }
+  ]
+}
