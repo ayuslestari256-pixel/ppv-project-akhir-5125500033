@@ -1,35 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BubuList- Terpadu</title>
+  <title>BubuList - Modular</title>
   
-  <!-- Tambahkan CSS Bootstrap 5.3.3 dengan versi terkunci di sini -->
+  <!-- CSS Bootstrap 5.3.3 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   
-  <!-- style.css ditaruh SESUDAH Bootstrap -->
-  <link rel="stylesheet" href="style.css">
+  <!-- style.css dari folder src -->
+  <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
 
-  <!-- NAVIGASI UTAMA (Muncul setelah masuk aplikasi) -->
-  <header class="main-header" id="mainHeader" style="display: none; justify-content: space-between; align-items: center; max-width: 1000px; margin: 20px auto; padding: 12px 20px; background: white; border-radius: 14px; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.08); border: 1px solid var(--border);">
+  <!-- NAVIGASI UTAMA -->
+  <header class="main-header" id="mainHeader" style="display: none;">
     <div class="brand">
-      <h2 style="margin:0; font-size: 1.1rem; color: var(--primary);">📌 BubuList</h2>
+      <h2>📌 BubuList</h2>
     </div>
-    <nav class="nav-tabs" style="display: flex; gap: 8px;">
-      <button type="button" class="tab-btn aktif" data-target="view-tugas" style="background: var(--primary); color: white; border: 1px solid #cbd5e1; padding: 8px 14px; border-radius: 8px; cursor: pointer; font-weight: 600;">📋 Tugas</button>
-      <button type="button" class="tab-btn" data-target="view-statistik" style="background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; padding: 8px 14px; border-radius: 8px; cursor: pointer; font-weight: 600;">📊 Statistik</button>
-      <button type="button" class="tab-btn" data-target="view-tentang" style="background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; padding: 8px 14px; border-radius: 8px; cursor: pointer; font-weight: 600;">ℹ️ Tentang</button>
-      <button type="button" class="tab-btn" data-target="view-musik" style="background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; padding: 8px 14px; border-radius: 8px; cursor: pointer; font-weight: 600;">🎵 Musik</button>
+    <nav class="nav-tabs">
+      <button type="button" class="tab-btn aktif" data-target="view-tugas">📋 Tugas</button>
+      <button type="button" class="tab-btn" data-target="view-statistik">📊 Statistik</button>
+      <button type="button" class="tab-btn" data-target="view-tentang">ℹ️ Tentang</button>
+      <button type="button" class="tab-btn" data-target="view-musik">🎵 Musik</button>
     </nav>
   </header>
 
-  <main class="main-container" style="max-width: 1000px; margin: 0 auto;">
+  <main class="main-container">
 
-    <!-- TAMPILAN 1: BERANDA / HALAMAN DEPAN & LOGIN -->
-    <section id="view-beranda" class="view-section aktif" style="display: block; text-align: center; padding-top: 40px;">
+    <!-- TAMPILAN 1: BERANDA / LOGIN -->
+    <section id="view-beranda" class="view-section aktif">
       <div class="card" style="max-width: 500px; margin: 0 auto; padding: 40px;">
-        <h1 style="font-size: 1.8rem; margin-bottom: 10px; color: var(--primary);">🚀 Selamat Datang di Bubulist</h1>
+        <h1>🚀 Selamat Datang di Bubulist</h1>
         <p style="color: #64748b; margin-bottom: 24px;">Kelola tugas kuliah dan aktivitas harianmu dengan lebih terstruktur dan interaktif.</p>
         
         <form id="loginForm">
@@ -111,7 +113,7 @@
       </div>
     </section>
 
-    <!-- TAMPILAN 4: TENTANG (Hanya Informasi Pengembang & Profil) -->
+    <!-- TAMPILAN 4: TENTANG -->
     <section id="view-tentang" class="view-section" hidden style="display: none;">
       <div class="card" style="max-width: 700px; margin: 0 auto;">
         <h2>ℹ️ Tentang Aplikasi & Pengembang</h2>
@@ -121,9 +123,7 @@
                style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px;"
                onerror="this.src='https://via.placeholder.com/150?text=Error'">
           <div style="flex: 1; min-width: 220px;">
-            <p><b>BubuList</b> adalah aplikasi manajemen tugas berbasis web yang dirancang untuk membantu pengguna mengorganisasi, melacak, dan memprioritaskan kegiatan harian secara efisien dan interaktif.
-
-Aplikasi ini dikembangkan sebagai bagian dari pemenuhan Tugas Praktikum Pemrograman Visual di Politeknik Elektronika Negeri Surabaya (PENS). Mengusung konsep antarmuka modern yang responsif dan ramah pengguna.</p>
+            <p><b>BubuList</b> adalah aplikasi manajemen tugas berbasis web yang dirancang untuk membantu pengguna mengorganisasi, melacak, dan memprioritaskan kegiatan harian secara efisien dan interaktif.</p>
             <p>Pengembang: Tari</p>
             <p>Program Studi: Multimedia dan Broadcasting (MMB)</p>
             <p>Institusi: Politeknik Elektronika Negeri Surabaya (PENS)</p>
@@ -132,26 +132,23 @@ Aplikasi ini dikembangkan sebagai bagian dari pemenuhan Tugas Praktikum Pemrogra
       </div>
     </section>
 
-    <!-- TAMPILAN 5: MUSIK (Card Terpisah Khusus Playlist Temen Nugas) -->
+    <!-- TAMPILAN 5: MUSIK -->
     <section id="view-musik" class="view-section" hidden style="display: none;">
       <div class="card" style="max-width: 600px; margin: 0 auto;">
         <h2>🎧 Temen Nugas Biar Gak Gabut</h2>
         <p style="color: #64748b; margin-bottom: 20px;">Pilih musik santai kesukaanmu buat nemenin ngerjain to-do list biar makin fokus dan asyik!</p>
         
-        <!-- Pilihan Playlist Lagu -->
         <div style="margin-bottom: 15px;">
           <label for="playlist-select" style="display: block; font-weight: 600; margin-bottom: 8px;">Pilih Playlist Musik:</label>
-          <select id="playlist-select" onchange="gantiLagu(this)" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; background: white; font-size: 0.95rem;">
-            <option value="iniabadi.mp3">Ini Abadi</option>
-            <option value="aboutyou.mp3">aboutyou</option>
-            <option value="Dinda.mp3">Dinda</option>
-          </select>
-        </div>
+      <select id="playlist-select" onchange="gantiLagu(this)" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #cbd5e1; background: white; font-size: 0.95rem;">
+  <option value="assets/iniabadi.mp3">Ini Abadi</option>
+  <option value="assets/aboutyou.mp3">aboutyou</option>
+  <option value="assets/Dinda.mp3">Dinda</option>
+</select>
 
-        <!-- Pemutar Audio -->
         <div style="background: #f8fafc; padding: 15px; border-radius: 10px; border: 1px solid #e2e8f0;">
           <audio id="audio-player" controls style="width: 100%;">
-            <source id="audio-source" src="iniabadi.mp3" type="audio/mpeg">
+           <source id="audio-source" src="assets/iniabadi.mp3" type="audio/mpeg">
             Peramban tidak mendukung audio.
           </audio>
         </div>
@@ -159,8 +156,9 @@ Aplikasi ini dikembangkan sebagai bagian dari pemenuhan Tugas Praktikum Pemrogra
     </section>
 
   </main>
-<!-- Tambahkan script JS Bootstrap 5.3.3 di sini -->
+
+  <!-- JS Bootstrap & Script Utama (ES Module) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-  <script src="script.js"></script>
+  <script type="module" src="src/main.js"></script>
 </body>
 </html>
