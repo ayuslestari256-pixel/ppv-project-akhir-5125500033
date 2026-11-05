@@ -1,9 +1,12 @@
-# Roadmap Project Akhir — Pemrograman Visual (P10–P14)
+# Roadmap — BubuList
 
-| Minggu | Deliverable / Target Utama | Bukti / Eviden | Fitur MVP Terkait |
+Roadmap diperbarui setiap minggu.
+
+| Sprint | Deliverable | Fitur MVP yang dikerjakan | Bukti |
 | :--- | :--- | :--- | :--- |
-| **P10** | Debugging minimal 2 bug nyata & manajemen branch/merge | Tangkapan layar Git log & perbaikan kode | Fitur utama pencatatan tugas |
-| **P11** | Pemecahan kode program menjadi modul ES (`src/`) | Struktur folder `src/`, `MODULE_MAP.md`, & riwayat commit Git log | Logika modular tugas & pemutar musik |
-| **P12** | Komponen UI *reusable*, penyimpanan data aman, & rilis tag versi `v0.1.0` | Berkas modul komponen & tag rilis GitHub | Tampilan kartu & penyimpanan lokal |
-| **P13** | Perumusan Konsep Produk (Berdasarkan Tugas 7) | Dokumen konsep produk / rancangan lanjutan | Fitur pendukung & MoSCoW |
-| **P14** | Demo Akhir Proyek | Presentasi & aplikasi berjalan utuh | Seluruh fitur MVP selesai |
+| **P09**<br>(selesai) | Charter, repo, roadmap, Bootstrap 5.3.3, pembungkus `ui-pustaka.js`, `DEPENDENCIES.md` | Semua fitur tampil dengan komponen pustaka | Screenshot 400 px dan laptop, `git log` |
+| **P10**<br>(selesai) | Perbaiki ≥ 2 bug nyata memakai cabang dan merge. Bug 1: validasi form tugas. Bug 2: perbaikan input tanggal deadline dan pemutar musik | Manajemen daftar tugas (Must), kontrol pemutar musik (Could) | Cabang `fix/tugas` dan `fix/musik`, `git log --graph`, screenshot sebelum dan sesudah |
+| **P11**<br>(selesai) | Kode dipecah menjadi ≥ 3 modul ES: `src/state.js` (penyimpanan data), `src/ui.js`, `src/main.js`, `src/script.js` | Tambah dan hapus tugas (Must), navigasi tab, pemutar musik modular (Should) | Struktur folder `src/`, aplikasi tetap berjalan, `git log`, `MODULE_MAP.md` |
+| **P12** | Komponen *reusable*, penyimpanan berversi yang aman, ekspor data JSON, `README`, `CHANGELOG`, tag `v0.x` | Riwayat daftar tugas, ekspor data | Tag `v0.x` di GitHub, `CHANGELOG.md`, screenshot |
+| **P13** | Konsep produk (Tugas 7) | Semua fitur MVP dirangkum | Dokumen Tugas 7 |
+| **P14** | Demo Akhir Proyek | Presentasi & aplikasi berjalan utuh | Seluruh fitur selesai |
