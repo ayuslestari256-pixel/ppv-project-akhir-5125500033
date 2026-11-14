@@ -1,8 +1,8 @@
-# BubuList — Project Akhir PPV
+Markdown# BubuList — Project Akhir PPV
 
 Aplikasi web pemutar musik dan daftar tugas (*task list*) interaktif untuk membantu mahasiswa mengorganisasi tugas harian serta menikmati musik secara lokal, lengkap dengan penyimpanan lokal, mode PWA, dan antarmuka yang rapi.
 
-**Pembuat:** Ayu sri lestari · NRP 5125500033 · D3 Teknologi Multimedia dan Broadcasting, PENS  
+**Pembuat:** Ayu Sri Lestari · NRP 5125500033 · D3 Teknologi Multimedia dan Broadcasting, PENS  
 **Mata kuliah:** Praktikum Pemrograman Visual (TB033109) · **Versi:** v0.4.0 (lihat [CHANGELOG](CHANGELOG.md))
 
 ## Cara menjalankan
@@ -12,39 +12,19 @@ Aplikasi memakai **ES Modules**, jadi **harus dibuka lewat server lokal** (bukan
 ```bash
 python -m http.server 5500    # lalu buka [http://127.0.0.1:5500/](http://127.0.0.1:5500/)
 # atau: Live Server di VS Code, atau npx vite
-
-Fitur MVP dan statusnyaFitur (Charter)PrioritasStatusManajemen daftar tugas (tambah, edit, hapus, centang selesai)MustSelesaiPemutar musik lokal terintegrasiMustSelesaiPenyimpanan data lokal via localStorageMustSelesaiPWA manifest integration (dukungan instalasi aplikasi)ShouldSelesaiPenyimpanan tahan data rusak + peringatan ke penggunaSprint 4SelesaiLogin / database cloudWon'tTidak dikerjakan
-
-Struktur modul
-Plaintext
-index.html
+Butuh internet untuk memuat Bootstrap dan font dari CDN (tampilan tetap berfungsi tanpa keduanya, hanya gayanya sedikit berbeda).Fitur MVP dan statusnyaFitur (Charter)PrioritasStatusManajemen daftar tugas (tambah, edit, hapus, centang selesai)MustSelesaiPemutar musik lokal terintegrasiMustSelesaiPenyimpanan data lokal via localStorageMustSelesaiPWA manifest integration (dukungan instalasi aplikasi)ShouldSelesaiPenyimpanan tahan data rusak + peringatan ke penggunaSprint 4SelesaiLogin / database cloudWon'tTidak dikerjakanStruktur modulPlaintextindex.html
 src/
   main.js       punca kendali: event form/tombol + logika utama aplikasi
   state.js      pengelola data tugas dan pemutar musik; penghubung storage.js
   storage.js    penyimpanan aman (KUNCI, muat, simpan, peringatan)
   komponen.js   komponen UI reusable (ItemTugas, ItemMusik)
   ui.js         menggambar daftar tugas, pemutar musik, dan banner peringatan
-
-  Kontrak penyimpanan (src/storage.js)
-KUNCI: 'bubulist:v1'. Naikkan ke :v2 bila bentuk data berubah.
-
-muat(): Membaca localStorage setiap dipanggil. Tidak pernah melempar. Selalu mengembalikan array data sah; JSON rusak, bukan array, dan item tidak sah disaring.
-
-simpan(data): Menulis JSON ke KUNCI dalam try/catch. Mengembalikan true / false; tidak melempar walau penuh/diblokir.
-
-peringatan(): Pesan untuk pengguna ('' bila aman), ditampilkan di banner #storageNotice.
-
-Kredit aset dan pustaka
-Bootstrap 5.3.3 via CDN jsDelivr (MIT).
-
-Font dan ikon pendukung via Google Fonts (SIL OFL).
-
-
+Kontrak penyimpanan (src/storage.js)KUNCI: 'bubulist:v1'. Naikkan ke :v2 bila bentuk data berubah.muat(): Membaca localStorage setiap dipanggil. Tidak pernah melempar. Selalu mengembalikan array data sah; JSON rusak, bukan array, dan item tidak sah disaring.simpan(data): Menulis JSON ke KUNCI dalam try/catch. Mengembalikan true / false; tidak melempar walau penuh/diblokir.peringatan(): Pesan untuk pengguna ('' bila aman), ditampilkan di banner #storageNotice.Kredit aset dan pustakaBootstrap 5.3.3 via CDN jsDelivr (MIT).Font dan ikon pendukung via Google Fonts (SIL OFL).
 ### Cara Memperbaikinya:
-1. Ganti isi file `README.md` di VS Code kamu dengan kode di atas.
-2. Simpan (`Ctrl + S`).
-3. Ketik perintah ini lagi di terminal VS Code untuk *push* ulang ke GitHub:
+1. Timpa isi file `README.md` di VS Code kamu dengan kode di atas.
+2. Simpan file (`Ctrl + S`).
+3. Jalankan perintah ini di terminal VS Code:
    ```bash
    git add .
-   git commit -m "perbaiki format spasi readme"
+   git commit -m "fix: perbaiki spasi tabel markdown readme"
    git push origin main
