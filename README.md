@@ -12,11 +12,37 @@ Aplikasi memakai **ES Modules**, jadi **harus dibuka lewat server lokal** (bukan
 ```bash
 python -m http.server 5500    # lalu buka [http://127.0.0.1:5500/](http://127.0.0.1:5500/)
 # atau: Live Server di VS Code, atau npx vite
-Butuh internet untuk memuat Bootstrap dan font dari CDN (tampilan tetap berfungsi tanpa keduanya, hanya gayanya sedikit berbeda).Fitur MVP dan statusnyaFitur (Charter)PrioritasStatusManajemen daftar tugas (tambah, edit, hapus, centang selesai)MustSelesaiPemutar musik lokal terintegrasiMustSelesaiPenyimpanan data lokal via localStorageMustSelesaiPWA manifest integration (dukungan instalasi aplikasi)ShouldSelesaiPenyimpanan tahan data rusak + peringatan ke penggunaSprint 4SelesaiLogin / database cloudWon'tTidak dikerjakanStruktur modulPlaintextindex.html
+
+## Fitur MVP dan statusnya
+
+| Fitur (Charter) | Prioritas | Status |
+| :--- | :--- | :--- |
+| Manajemen daftar tugas (tambah, edit, hapus, centang selesai) | Must | Selesai |
+| Pemutar musik lokal terintegrasi | Must | Selesai |
+| Penyimpanan data lokal via `localStorage` | Must | Selesai |
+| PWA manifest integration (dukungan instalasi aplikasi) | Should | Selesai |
+| Penyimpanan tahan data rusak + peringatan ke pengguna | Sprint 4 | Selesai |
+| Login / database cloud | Won't | Tidak dikerjakan |
+
+## Struktur modul
+
+```text
+index.html
 src/
   main.js       punca kendali: event form/tombol + logika utama aplikasi
   state.js      pengelola data tugas dan pemutar musik; penghubung storage.js
   storage.js    penyimpanan aman (KUNCI, muat, simpan, peringatan)
   komponen.js   komponen UI reusable (ItemTugas, ItemMusik)
   ui.js         menggambar daftar tugas, pemutar musik, dan banner peringatan
-Kontrak penyimpanan (src/storage.js)KUNCI: 'bubulist:v1'. Naikkan ke :v2 bila bentuk data berubah.muat(): Membaca localStorage setiap dipanggil. Tidak pernah melempar. Selalu mengembalikan array data sah; JSON rusak, bukan array, dan item tidak sah disaring.simpan(data): Menulis JSON ke KUNCI dalam try/catch. Mengembalikan true / false; tidak melempar walau penuh/diblokir.peringatan(): Pesan untuk pengguna ('' bila aman), ditampilkan di banner #storageNotice.Kredit aset dan pustakaBootstrap 5.3.3 via CDN jsDelivr (MIT).Font dan ikon pendukung via Google Fonts (SIL OFL).
+
+  ## Kontrak penyimpanan (`src/storage.js`)
+
+* **KUNCI:** `'bubulist:v1'`. Naikkan ke `:v2` bila bentuk data berubah.
+* **muat():** Membaca `localStorage` setiap dipanggil. Tidak pernah melempar. Selalu mengembalikan array data sah; JSON rusak, bukan array, dan item tidak sah disaring.
+* **simpan(data):** Menulis JSON ke `KUNCI` dalam `try/catch`. Mengembalikan `true / false`; tidak melempar walau penuh/diblokir.
+* **peringatan():** Pesan untuk pengguna (`` bila aman), ditampilkan di banner `#storageNotice`.
+
+## Kredit aset dan pustaka
+
+* Bootstrap 5.3.3 via CDN jsDelivr (MIT).
+* Font dan ikon pendukung via Google Fonts (SIL OFL).
