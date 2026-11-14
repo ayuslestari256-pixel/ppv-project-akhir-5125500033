@@ -20,11 +20,3 @@ src/
   komponen.js   komponen UI reusable (ItemTugas, ItemMusik)
   ui.js         menggambar daftar tugas, pemutar musik, dan banner peringatan
 Kontrak penyimpanan (src/storage.js)KUNCI: 'bubulist:v1'. Naikkan ke :v2 bila bentuk data berubah.muat(): Membaca localStorage setiap dipanggil. Tidak pernah melempar. Selalu mengembalikan array data sah; JSON rusak, bukan array, dan item tidak sah disaring.simpan(data): Menulis JSON ke KUNCI dalam try/catch. Mengembalikan true / false; tidak melempar walau penuh/diblokir.peringatan(): Pesan untuk pengguna ('' bila aman), ditampilkan di banner #storageNotice.Kredit aset dan pustakaBootstrap 5.3.3 via CDN jsDelivr (MIT).Font dan ikon pendukung via Google Fonts (SIL OFL).
-### Cara Memperbaikinya:
-1. Timpa isi file `README.md` di VS Code kamu dengan kode di atas.
-2. Simpan file (`Ctrl + S`).
-3. Jalankan perintah ini di terminal VS Code:
-   ```bash
-   git add .
-   git commit -m "fix: perbaiki spasi tabel markdown readme"
-   git push origin main
