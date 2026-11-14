@@ -1,9 +1,9 @@
-Markdown# BubuList — Project Akhir PPV
+# BubuList — Project Akhir PPV
 
 Aplikasi web pemutar musik dan daftar tugas (*task list*) interaktif untuk membantu mahasiswa mengorganisasi tugas harian serta menikmati musik secara lokal, lengkap dengan penyimpanan lokal, mode PWA, dan antarmuka yang rapi.
 
 **Pembuat:** Ayu Sri Lestari · NRP 5125500033 · D3 Teknologi Multimedia dan Broadcasting, PENS  
-**Mata kuliah:** Praktikum Pemrograman Visual (TB033109) · **Versi:** v0.4.0 (lihat [CHANGELOG](CHANGELOG.md))
+**Mata kuliah:** Praktikum Pemrograman Visual (TB033109) · **Versi:** v0.4.0
 
 ## Cara menjalankan
 
